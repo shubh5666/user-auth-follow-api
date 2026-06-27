@@ -1,16 +1,6 @@
 const validator = require("validator");
 
-
-// VALIDATION UTILITIES
-// Helper functions for validating
-// user input.
-
-
-
-
 // REGISTER DATA VALIDATION
-
-
 const validateRegisterData = (req) => {
 
     const {
@@ -23,7 +13,6 @@ const validateRegisterData = (req) => {
     // Check if all fields are provided
 
     if (!name || !email || !password) {
-
         throw new Error("All fields are required");
 
     }
@@ -32,7 +21,6 @@ const validateRegisterData = (req) => {
     // Check if name is provided
 
     if (!name.trim()) {
-
         throw new Error("Name is not valid");
 
     }
@@ -41,7 +29,6 @@ const validateRegisterData = (req) => {
     // Validate email format
 
     else if (!validator.isEmail(email)) {
-
         throw new Error("Email is not valid");
 
     }
@@ -50,7 +37,6 @@ const validateRegisterData = (req) => {
     // Validate password strength
 
     else if (!validator.isStrongPassword(password)) {
-
         throw new Error(
             "Please enter a strong password"
         );

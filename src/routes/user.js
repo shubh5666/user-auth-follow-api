@@ -3,22 +3,8 @@ const userRouter = express.Router();
 
 const { userAuth } = require("../middlewares/auth");
 
-// ==========================================
-// USER ROUTES
-//
-// Handles:
-// 1. Follow User
-// 2. Unfollow User
-// 3. Get Followers
-// ==========================================
 
-
-
-// ==========================================
 // FOLLOW USER API
-//
-// Follow another user.
-// ==========================================
 
 userRouter.post("/:id/follow", userAuth, async (req, res) => {
 
@@ -137,12 +123,8 @@ userRouter.post("/:id/follow", userAuth, async (req, res) => {
 });
 
 
-
-// ==========================================
 // UNFOLLOW USER API
-//
-// Remove follow.
-// ==========================================
+
 
 userRouter.delete("/:id/follow", userAuth, async (req, res) => {
 
@@ -203,11 +185,7 @@ userRouter.delete("/:id/follow", userAuth, async (req, res) => {
 
 
 
-// ==========================================
 // GET FOLLOWERS API
-//
-// Returns followers of a user.
-// ==========================================
 
 userRouter.get("/:id/followers", async (req, res) => {
 

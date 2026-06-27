@@ -7,10 +7,7 @@ const { validateRegisterData } = require("../utils/validation");
 const generateToken = require("../utils/generateToken");
 
 
-
 // REGISTER API
-// Create a new user.
-
 
 authRouter.post("/register", async (req, res) => {
 
@@ -104,7 +101,6 @@ authRouter.post("/register", async (req, res) => {
 
 // LOGIN API
 // Authenticate an existing user.
-
 
 authRouter.post("/login", async (req, res) => {
 

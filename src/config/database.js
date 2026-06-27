@@ -19,13 +19,12 @@ async function connectDB() {
     // USERS TABLE
     db.prepare(`
         CREATE TABLE IF NOT EXISTS users (
-
             id INTEGER PRIMARY KEY AUTOINCREMENT,
 
             name TEXT NOT NULL,
 
             email TEXT UNIQUE NOT NULL,
-
+            
             password TEXT NOT NULL
 
         )
@@ -69,13 +68,9 @@ module.exports = connectDB;
 DATABASE FLOW
 
 1. Connect SQLite
-
 2. Enable Foreign Keys
-
 3. Create users table
-
 4. Create follows table
-
 5. Return database connection
 
 */
