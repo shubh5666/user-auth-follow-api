@@ -2,11 +2,10 @@
 
 const jwt = require("jsonwebtoken");
 
-// ==========================================
+
 // JWT TOKEN GENERATION
-//
 // Generate JWT token for the user.
-// ==========================================
+
 
 const generateToken = async (userId) => {
 

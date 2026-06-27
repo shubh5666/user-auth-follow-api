@@ -6,21 +6,11 @@ const bcrypt = require("bcryptjs");
 const { validateRegisterData } = require("../utils/validation");
 const generateToken = require("../utils/generateToken");
 
-// ==========================================
-// AUTHENTICATION ROUTES
-//
-// Handles:
-// 1. Register
-// 2. Login
-// ==========================================
 
 
-
-// ==========================================
 // REGISTER API
-//
 // Create a new user.
-// ==========================================
+
 
 authRouter.post("/register", async (req, res) => {
 
@@ -111,11 +101,10 @@ authRouter.post("/register", async (req, res) => {
 
 
 
-// ==========================================
+
 // LOGIN API
-//
 // Authenticate an existing user.
-// ==========================================
+
 
 authRouter.post("/login", async (req, res) => {
 
@@ -216,7 +205,6 @@ module.exports = authRouter;
 
 
 /*
-==========================================
 AUTHENTICATION FLOW
 
 REGISTER
@@ -236,5 +224,4 @@ LOGIN
 4. Generate JWT
 5. Return token
 
-==========================================
 */

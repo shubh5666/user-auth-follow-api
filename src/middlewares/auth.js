@@ -1,19 +1,14 @@
 const jwt = require("jsonwebtoken");
 
-// ==========================================
+
 // USER AUTHENTICATION MIDDLEWARE
-//
 // Verify JWT Token
-// ==========================================
+
 
 const userAuth = async (req, res, next) => {
 
     try {
 
-        // Read token from Authorization Header
-        //
-        // Example:
-        // Authorization: Bearer eyJhbGci...
 
         const authHeader = req.headers.authorization;
 
@@ -66,18 +61,11 @@ module.exports = {
 
 
 /*
-==========================================
 USER AUTHENTICATION FLOW
-
 1. Read Authorization Header
-
 2. Validate Bearer Token
-
 3. Verify JWT
-
 4. Store User Information
-
 5. Move to Next Middleware
 
-==========================================
 */

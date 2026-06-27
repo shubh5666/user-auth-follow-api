@@ -2,11 +2,10 @@ const Database = require("better-sqlite3");
 const path = require("path");
 console.log("Database Location:", path.resolve("database.db"));
 
-// ==========================================
+
 // DATABASE CONNECTION
-//
 // Connect Node.js application to SQLite
-// ==========================================
+
 
 async function connectDB() {
 
@@ -16,10 +15,8 @@ async function connectDB() {
 
     db.pragma("foreign_keys = ON");
 
-    // ==========================================
-    // USERS TABLE
-    // ==========================================
 
+    // USERS TABLE
     db.prepare(`
         CREATE TABLE IF NOT EXISTS users (
 
@@ -35,9 +32,8 @@ async function connectDB() {
     `).run();
 
 
-    // ==========================================
+
     // FOLLOWS TABLE
-    // ==========================================
 
     db.prepare(`
         CREATE TABLE IF NOT EXISTS follows (
@@ -70,7 +66,6 @@ module.exports = connectDB;
 
 
 /*
-==========================================
 DATABASE FLOW
 
 1. Connect SQLite
@@ -83,5 +78,4 @@ DATABASE FLOW
 
 5. Return database connection
 
-==========================================
 */

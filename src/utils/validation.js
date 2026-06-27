@@ -1,16 +1,15 @@
 const validator = require("validator");
 
-// ==========================================
+
 // VALIDATION UTILITIES
-//
 // Helper functions for validating
 // user input.
-// ==========================================
 
 
-// ==========================================
+
+
 // REGISTER DATA VALIDATION
-// ==========================================
+
 
 const validateRegisterData = (req) => {
 
@@ -66,13 +65,11 @@ module.exports = {
 
 
 /*
-==========================================
 REGISTER FLOW
 
 1. Check all fields
 2. Validate name
 3. Validate email
 4. Validate password
-
-==========================================
 */
+
